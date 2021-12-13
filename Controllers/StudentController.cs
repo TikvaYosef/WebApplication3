@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication3.Models;
 
 namespace WebApplication3.Controllers
 {
@@ -38,6 +39,35 @@ namespace WebApplication3.Controllers
             string[] array4= new string[] { "tikva" ,"keren","25" };
            
             return Json(array4,JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult ObjectS()
+        {
+            Student student1 = new Student("tikva","yosef",1996,12);
+            ViewBag.student = student1;
+            return View();
+        }
+        public ActionResult ObjectS2()
+        {
+            Student student1 = new Student("keren", "hillu", 1998, 12);
+            return View(student1);
+        }
+
+        public ActionResult Objects4()
+        {
+            Student student2 = new Student("shay","balayna",2000,10);
+            Student student3 = new Student("keren", "haillu", 1998, 13);
+            Student student4 = new Student("eden","testma",1996,12);
+            Student student5 = new Student("yafit", "samuel", 1997, 11);
+            List<Student> list1 = new List<Student>();
+            list1.Add(student2);
+            list1.Add(student3);
+            list1.Add(student4);
+            list1.Add(student5);
+
+
+
+            return View(list1);
         }
 
     }

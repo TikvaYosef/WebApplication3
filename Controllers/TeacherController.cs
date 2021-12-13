@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication3.Models;
 
 namespace WebApplication3.Controllers
 {
@@ -50,6 +51,18 @@ namespace WebApplication3.Controllers
             string[] arrayOfLname = new string[] { "levi", "cohen", "yosef", "hailu", "tzagay", "balay", "tasama", "samuel", "ayano", "mekonen" };
             ViewBag.array = arrayOfLname;
             return View();
+        }
+
+        public ActionResult ObjectT()
+        {
+            Teacher teacher1 = new Teacher("tikva","yosef",1996,50000);
+            ViewBag.taecher = teacher1;
+            return View();
+        }
+        public ActionResult ObjectT2()
+        {
+            Teacher teacher1 = new Teacher("keren", "hillu", 1998, 50000);
+            return View(teacher1);
         }
     }
 }

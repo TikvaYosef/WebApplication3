@@ -127,6 +127,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Manager.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\Teacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -179,10 +182,15 @@
     <Content Include="Views\Manager\ShowManagers.cshtml" />
     <Content Include="Views\Teacher\RandomNum.cshtml" />
     <Content Include="Views\Teacher\RandomName.cshtml" />
+    <Content Include="Views\Student\ObjectS.cshtml" />
+    <Content Include="Views\Teacher\ObjectT.cshtml" />
+    <Content Include="Views\Student\ObjectS2.cshtml" />
+    <Content Include="Views\Teacher\ObjectT2.cshtml" />
+    <Content Include="Views\Manager\Objectm2.cshtml" />
+    <Content Include="Views\Student\Objects4.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

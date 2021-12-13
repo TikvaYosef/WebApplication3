@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication3.Models;
 
 namespace WebApplication3.Controllers
 {
@@ -32,7 +33,10 @@ namespace WebApplication3.Controllers
         {
             return View();
         }
-
-
+        public ActionResult Objectm2()
+        {
+            Manager manager1 = new Manager("tikva","yosef",05245689);
+            return View(manager1);
+        }
     }
 }
