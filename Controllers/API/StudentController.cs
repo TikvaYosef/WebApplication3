@@ -17,7 +17,7 @@ namespace WebApplication3.Controllers
         public ActionResult ShowNameOfStudent()
         {
             ViewBag.title = "Tikva";
-            return View();
+            return Json(ViewBag.title, JsonRequestBehavior.AllowGet);
         }
         public ActionResult ShowStudent()
         {
@@ -28,7 +28,7 @@ namespace WebApplication3.Controllers
         {
             string[] namesOfStudent = new string[] { "tikva", "keren", "yafit", "eden", "lior", "aschalo" };
             ViewBag.array = namesOfStudent;
-            return View();
+            return Json(ViewBag.array , JsonRequestBehavior.AllowGet);
         }
         public ActionResult ShowStudents()
         {
@@ -45,11 +45,11 @@ namespace WebApplication3.Controllers
         {
             Student student1 = new Student("tikva", "yosef", 1996, 12);
             ViewBag.student = student1;
-            return View();
+            return Json(ViewBag.student, JsonRequestBehavior.AllowGet);
         }
         public ActionResult ObjectS2()
         {
-            return View(Ob1());
+            return Json(Ob1() , JsonRequestBehavior.AllowGet);
         }
         static Student Ob1()
         {
@@ -61,7 +61,7 @@ namespace WebApplication3.Controllers
 
         public ActionResult Objects4()
         {
-            return View(Ob());
+            return Json(Ob() , JsonRequestBehavior.AllowGet);
         }
 
         static List<Student> Ob()
